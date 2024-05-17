@@ -17,8 +17,7 @@ export const charmander: Pokemon = {
     name: "Charmander"
 }
 
-console.log(bulbasaur);
+export const pokemons: Pokemon[] = [];
 
-// pokemonsIds.push(+'1') //el + convierte el string a number
-
-// console.log(pokemonsIds);
+pokemons.push(charmander, bulbasaur);
+console.log(pokemons);
