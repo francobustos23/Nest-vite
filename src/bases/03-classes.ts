@@ -39,9 +39,10 @@ export class Pokemon {
 
     async getMoves() {
         // const moves = 0;
-        const resp = axios.get('https://pokeapi.co/api/v2/pokemon/4')
-        
-        return resp;
+        const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/4')
+        console.log(data.moves);
+
+        return data;
     }
 }
 export const charmander = new Pokemon(1,'Charmander',);
@@ -53,4 +54,5 @@ export const charmander = new Pokemon(1,'Charmander',);
 // charmander.scream();
 // charmander.speak();
 
-console.log(charmander.getMoves());
+// console.log(charmander.getMoves());
+charmander.getMoves()
